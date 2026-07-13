@@ -1,0 +1,37 @@
+
+/**
+ * <p> An enumeration representing the different screens in the game.</p>
+ *
+ * @author Leon Li
+ * @version 2.0
+ */
+public enum Screen {
+    MAIN_MENU(null),
+    LOGIN(MAIN_MENU),
+    PLAYER(LOGIN),
+    SELECT_LEVEL(PLAYER),
+    CREATE_ADMIN(MAIN_MENU),
+    FORGOT_PASSWORD(LOGIN),
+    RESETFORGOT_PASSWORD(FORGOT_PASSWORD),
+    HIGH_SCORES(MAIN_MENU),
+    PARENTAL_CONTROLS(MAIN_MENU),
+    ACCOUNT_MANAGEMENT(PARENTAL_CONTROLS),
+    CREATE_STUDENT(ACCOUNT_MANAGEMENT),
+    CHOOSE_STUDENT_PASSWORD_RESET(ACCOUNT_MANAGEMENT),
+    RESET_PASSWORD(ACCOUNT_MANAGEMENT),
+    RESET_STATISTICS(ACCOUNT_MANAGEMENT),
+    RESET_HIGH_SCORES(ACCOUNT_MANAGEMENT),
+    TUTORIAL(MAIN_MENU),
+    PLAYER_STATISTICS(PARENTAL_CONTROLS),
+    NEW_GAME(PLAYER),
+    TYPING_STATISTICS(PLAYER),
+    SHOP(SELECT_LEVEL),
+    GAMEPLAY(SELECT_LEVEL);
+
+    public final Screen previous;
+
+    Screen(Screen previous) {
+        this.previous = previous;
+
+    }
+}
